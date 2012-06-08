@@ -7,8 +7,8 @@ import org.bukkit.entity.Player;
 
 public class RacesCommandExecutor implements CommandExecutor {
 	private main Main;
-	public RacesCommandExecutor(main races) {
-		this.Main = races;
+	public RacesCommandExecutor(main main) {
+		this.Main = main;
 	}
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel,
@@ -24,8 +24,8 @@ public class RacesCommandExecutor implements CommandExecutor {
 				if(commandLabel.equalsIgnoreCase("?")){
 					showHelp(sender);
 				}
-				else if(commandLabel.equalsIgnoreCase("reload")){
-					main.reload();
+				else if(commandLabel.equalsIgnoreCase("restart")){
+					Main.restart();
 				}
 			}
 			return true;
